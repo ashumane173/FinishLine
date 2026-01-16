@@ -1,0 +1,95 @@
+<div class="top__navigation">
+    <div class="container containercss container top__navigation__content">
+        <!-- SHOW DATE -->
+        <div class="top__navigation__time">
+            <p style="margin-bottom: 0;color: #005EB8;">{{ todaysTimeAndDate$ | async }}</p>
+        </div>
+
+        <div class="btn-container">
+            <button (click)="whereToBuy()" class="btn-secondary" title="WHERE TO BUY">WHERE TO BUY</button>
+            <button (click)="findContractor()" class="btn-primary" title="FIND A CONTRACTOR">FIND A CONTRACTOR</button>
+        </div>
+
+    </div>
+
+    <section class="main_menu">
+        <div class="container containercss">
+            <div class="subcontainer">
+                <nav class="navbar_menu myNav">
+                    <a [href]="siteUrl" class="nav-branding" title="Finish Line">
+
+                    <!-- Desktop Logo -->
+                    <!-- <img class="certainteed_logo"
+                        src="https://digital-h-1-uat.certainteed.com/ctwarranties/assets/images/logo.svg"
+                        alt="CertainTeed Logo" title="CertainTeed"> -->
+                    <img class="finishline_logo"
+                        src="assets/finish-line-logo.svg"
+                        alt="CertainTeed Logo" title="Finish Line">
+                       
+                    <!-- Tablet/Mobile Logo -->
+                    <!-- <img class="logo logo-mobile certainteed_mobile_logo"
+                        src="https://www.certainteed.com/themes/custom/certainteed/images/logo-m.svg"
+                        alt="CertainTeed Mobile Logo" /> -->
+
+                    </a>
+                    <ul class="nav-menu onmobile" style="margin-bottom: 0;" *ngIf="showNavItems">
+                        <ng-container>
+                            <li class="nav-item inside__menus">
+                                <a class="nav-link" routerLink="/" title="HOME">
+                                    <img class="nav-icon"
+                                        src="assets/hamburger-home.png"
+                                        alt="HOME" />
+                                    HOME
+                                </a>
+                            </li>
+
+                            <li class="nav-item inside__menus">
+                                <a class="nav-link" routerLink="/about-us" title="ABOUT US">
+                                    <img class="nav-icon"
+                                        src="assets/my-profile-icon.png"
+                                        alt="ABOUT US" />
+                                    ABOUT US
+                                </a>
+                            </li>
+
+                            <li class="nav-item inside__menus">
+                                <a class="nav-link" routerLink="/products" title="PRODUCTS">
+                                    <img class="nav-icon"
+                                        src="assets/order-icon.png"
+                                        alt="PRODUCTS" />
+                                    PRODUCTS
+                                </a>
+                            </li>
+
+                            <li class="nav-item inside__menus">
+                                <a class="nav-link" routerLink="/our-guarantee" title="OUR GUARANTEE">
+                                    <img class="nav-icon"
+                                        src="assets/hamburger-reports.png"
+                                        alt="OUR GUARANTEE" />
+                                    OUR GUARANTEE
+                                </a>
+                            </li>
+
+                            <li class="nav-item inside__menus">
+                                <a class="nav-link" routerLink="/contact-us" title="CONTACT US">
+                                    <img class="nav-icon"
+                                        src="assets/marker-icon.png"
+                                        alt="CONTACT US" />
+                                    CONTACT US
+                                </a>
+                            </li>
+                        </ng-container>
+                    </ul>
+
+                    <div *ngIf="showNavItems" class="hamburger-container">
+                        <div class="hamburger" (click)="toggleHamburgerMenu()">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+</div>

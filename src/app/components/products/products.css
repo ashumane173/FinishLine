@@ -1,0 +1,151 @@
+* {
+    font-family: "Gotham", "Roboto", sans-serif;
+}
+
+.products-container {
+  /* max-width: 1400px; */
+  margin: 0 auto;
+  padding: 35px 0px 60px 0;
+}
+
+.products-header {
+  margin-bottom: 30px;
+}
+
+.products-header h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #005EB8;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.product-card {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  overflow: hidden;
+  /* box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* .product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+} */
+
+.product-image {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #f8f9fa; */
+  background: #F5F6F7
+  /* padding: 32px; */
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-info {
+  padding: 24px;
+}
+
+.product-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.product-subtitle {
+  font-size: 14px;
+  color: #0066cc;
+  line-height: 1.5;
+}
+
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: rgba(255, 107, 0, 0.95); */
+  background: rgba(0, 106, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+.view-details {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .products-header h1 {
+    font-size: 32px;
+  }
+}
+
+@media(min-width: 576px) and (max-width: 768px) {
+    .containercss {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        max-width: 100rem;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 992px) {
+    .containercss {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        max-width: 100rem;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .containercss {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 3000px) {
+    .containercss {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        max-width: 100rem;
+    }
+
+}

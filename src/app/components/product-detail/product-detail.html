@@ -1,0 +1,74 @@
+<div class="conatiner containercss">
+
+    <div class="product-detail-container" *ngIf="product">
+        
+        <div style="font-family: 'Roboto'; margin-top: 2em; margin-bottom: 2em;">
+            <a routerLink="/products"
+                title="BACK TO PRODUCTS"
+                style="text-decoration: none; color: #005EB8; font-weight: 500;"    
+            >PRODUCTS </a> 
+            > 
+            <span style="text-transform: uppercase; color: #005EB8; font-weight: 500;">{{ product.name }}</span>
+        </div>
+
+        <div class="detail-content">
+            <div class="product-showcase">
+                <div class="product-image-large">
+                    <img [src]="product.image" [alt]="product.name">
+                </div>
+
+                <div class="download-section" *ngIf="product.msdsSheet || product.productSpecs">
+                    <h3>Download Material Safety Data Sheet</h3>
+                    <button class="download-button" *ngIf="product.msdsSheet" (click)="openPDF(product.msdsSheet)">
+                        Download MSDS
+                    </button>
+                    <button class="download-button" *ngIf="product.productSpecs"
+                        (click)="openPDF(product.productSpecs)">
+                        Download Product Specifications
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-details">
+                <h1 class="product-title">{{ product.name }}</h1>
+
+                <!-- Flexible content blocks -->
+                <ng-container *ngFor="let block of product.contentBlocks">
+
+                    <!-- Paragraph block -->
+                    <div class="content-paragraph" *ngIf="block.type === 'paragraph'">
+                        <p>{{ block.content }}</p>
+                    </div>
+
+                    <!-- Heading block -->
+                    <div class="content-heading" *ngIf="block.type === 'heading'">
+                        <h2>{{ block.title }}</h2>
+                    </div>
+
+                    <!-- Features block -->
+                    <div class="features-section" *ngIf="block.type === 'features'">
+                        <h3 *ngIf="block.title">{{ block.title }}</h3>
+                        <ul class="features-list">
+                            <li *ngFor="let item of block.items">{{ item }}</li>
+                        </ul>
+                    </div>
+
+                    <!-- Specifications block -->
+                    <div class="specifications-section" *ngIf="block.type === 'specifications'">
+                        <h3 *ngIf="block.title">{{ block.title }}</h3>
+                        <ul class="specifications-list">
+                            <li *ngFor="let item of block.items">{{ item }}</li>
+                        </ul>
+                    </div>
+
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+    <div class="not-found" *ngIf="!product">
+        <h2>Product not found</h2>
+        <button class="back-button" (click)="goBack()">Back to Products</button>
+    </div>
+
+</div>

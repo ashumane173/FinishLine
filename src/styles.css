@@ -1,0 +1,150 @@
+/* Gotham Thin */
+@font-face {
+  font-family: 'Gotham';
+  src: url('assets/fonts/Gotham-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Gotham Light */
+@font-face {
+  font-family: 'Gotham';
+  src: url('assets/fonts/GothamLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Gotham Regular / Book */
+@font-face {
+  font-family: 'Gotham';
+  src: url('assets/fonts/GothamBook.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Gotham Medium */
+@font-face {
+  font-family: 'Gotham';
+  src: url('assets/fonts/GothamMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Gotham Bold */
+@font-face {
+  font-family: 'Gotham';
+  src: url('assets/fonts/GothamBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Gotham Black */
+@font-face {
+  font-family: 'Gotham';
+  src: url('assets/fonts/Gotham-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Roboto Thin */
+@font-face {
+  font-family: 'Roboto';
+  src: url('assets/fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Roboto Regular */
+@font-face {
+  font-family: 'Roboto';
+  src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Roboto Medium */
+@font-face {
+  font-family: 'Roboto';
+  src: url('assets/fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Roboto Bold */
+@font-face {
+  font-family: 'Roboto';
+  src: url('assets/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Roboto Black */
+@font-face {
+  font-family: 'Roboto';
+  src: url('assets/fonts/Roboto-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: gotham, "Helvetica", "Arial", sans-serif;
+    font-family: 'Roboto', 'Times New Roman', sans-serif; */
+    font-family: 'Gotham', 'Roboto', sans-serif;
+}
+
+body {
+    height: 100%;
+    font-family: 'Gotham', 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.uwy.userway_p5 .uai {
+    background: #005eb8 !important;
+}
+
+@media only screen and (max-device-width: 480px) and (max-width:768px) {
+    .uwy.userway_p5 .uai {
+        top: 0 !important;
+        right: 10px !important;
+        background: #005eb8 !important;
+    }
+}
+
+.uwy .uai img:not(.userway_check_on),
+.uwy .ulsti img:not(.userway_check_on),
+body .uwy .uai img:not(.userway_check_on),
+body .uwy .ulsti img:not(.userway_check_on) {
+    background: #005eb8 !important;
+}
+
+#userwayAccessibilityIcon {
+    background: #005eb8 !important;
+    position: absolute;
+    left: 0px;
+    bottom: 60px;
+    width: 50px;
+    height: 50px;
+}
+
+.custom-background {
+    background: #005eb8 !important;
+}
+
+#onetrust-pc-sdk .ot-pc-footer-logo {
+    display: none !important;
+}
+
+#onetrust-accept-btn-handler {
+    background-color: #005eb8 !important;
+    border: 1px solid #014e96 !important;
+    color: #FFFFFF !important;
+}
+
+#onetrust-reject-all-handler {
+    background-color: #005eb8 !important;
+    border: 1px solid #014e96 !important;
+    color: #FFFFFF !important;
+}

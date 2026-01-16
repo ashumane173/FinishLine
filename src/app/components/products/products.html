@@ -1,0 +1,26 @@
+
+<div class="container containercss">
+    <div class="products-container">
+      <div class="products-header">
+        <h1>Our Products</h1>
+      </div>
+    
+      <div class="products-grid">
+        <div 
+          class="product-card" 
+          *ngFor="let product of products"
+          (click)="viewProduct(product.id)">
+          <div class="product-image">
+            <img [src]="product.image" [alt]="product.name">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">{{ product.name }}</h3>
+            <p class="product-subtitle">{{ product.subtitle }}</p>
+          </div>
+          <div class="product-overlay">
+            <span class="view-details">View Details →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
